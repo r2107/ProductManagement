@@ -1,0 +1,39 @@
+.productForm{
+  margin:2%;
+}
+
+.productForm label{
+  display: inline-block;
+  font-size: 1.15em;
+  font-weight: 600;
+  padding: 4px 10px;
+}
+.productForm input[type='text'],.productForm input[type='number']{
+  font-size: 1.02em;
+  position: relative;
+  left:10%;
+  top:-24px;
+}
+
+.productForm input[type='checkbox'],.productForm input[type='radio']{
+  transform: scale(1.2);
+  margin-right:4px;
+}
+
+.productForm button{
+  border:none;
+  margin-left:1%;
+  font-size: 1.1em;
+  background: #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  padding:6px 20px;
+}
+
+.productForm button:hover{
+  background: #bfbfbf;
+}
+
+.productForm button:focus{
+  outline:none;
+}

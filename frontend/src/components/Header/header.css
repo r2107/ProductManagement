@@ -1,0 +1,32 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  background:#eee;
+}
+
+.header h1{
+  margin-left:2%;
+}
+
+.header button {
+  height:100%;
+  border:none;
+  padding:0 20px;
+  cursor: pointer;
+  background: transparent;
+  font-size: 1.3em;
+  margin-right:2%;
+}
+
+.header button:hover{
+  background:#ddd;
+}
+
+.name a{
+  color:black;
+}
+
+.logout{
+  display: block;
+  margin-right: 2%;
+}

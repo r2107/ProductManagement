@@ -1,0 +1,32 @@
+.firstLine{
+  margin:2% 0px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.firstLine input{
+  margin-bottom:8px;
+  width:40%;
+  padding:4px 8px;
+  font-size: 1.05em;
+}
+
+.firstLine select{
+  margin-bottom:8px;
+  padding:4px 8px;
+  font-size: 1.05em;
+}
+
+.firstLine a{
+  font-size: 1.3em;
+  color:#444;
+  padding:4px 8px;
+  padding-top:7px;
+  background-color:#ccc;
+  border-radius: 4px;
+}
+
+.firstLine a:hover{
+  background: #bfbfbf;
+}

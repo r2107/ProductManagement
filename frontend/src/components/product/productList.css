@@ -1,0 +1,31 @@
+.table{
+  margin:2%;
+  font-size: 1.1em;
+  color:#333;
+  border-spacing: 0;
+  border: 1px solid #333;
+}
+
+.table thead{
+  background-color: #333;
+  color:#eee;
+}
+
+.table th{
+  padding:4px 6px;
+  text-align: left;
+}
+
+.table td{
+  padding:4px 6px;
+}
+
+.id{
+  font-size: 0.8em;
+  background-color: #dfdfdf;
+}
+
+.center{
+  text-align: center;
+  padding: 4px 0;
+}
