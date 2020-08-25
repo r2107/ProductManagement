@@ -3,47 +3,45 @@ This is for managing products.
 
 Api Listing ->
 
-1. Adding a product
+1. User Sign-up
+@PostMapping(“/auth/signup”)
+Signature => public ResponseEntity<?> registerUser(@RequestBody SignupRequest signupRequest) {}
 
-@PostMapping("/users/{userType}/productList/createProduct")
+2. User Sign-in
+@PostMapping(“/auth/signin”)
+Signature => public ResponseEntity<?> authenticateUser(@RequestBody LoginRequest loginRequest) {}
 
-Signature : public ResponseEntity<Void> createProduct(@PathVariable String userType, @RequestBody Product product){}
+3. Adding a Product
+@PostMapping("/users/productList/createProduct")
+Signature => public Product createProduct(@RequestBody Product product){}
 
-2. List of all products
+4. List of All Products
+@GetMapping("/users/productList/fetch")
+Signature => public List<Product> getAllProducts(){}
+  
+5. List of Costly Products
+@GetMapping("/users/productList/costlyProducts/{price}")
+Signature => publicList<Product> getAllProductsCostlierThanGivenPrice(@ PathVariable double price) {}
+  
+6. List of products Not Available
+@GetMapping("/users/productList/notAvailable")
+Signature : public List<Product> getAllProductsNotAvailabile() {}
+  
+7. Search By Title(Word)
+@GetMapping("/users/productList/searchByTitle/{title}")
+Signature => public List<Product> getAllProductsBasedOnWord (@PathVariable String title) {}
+  
+8. Updating a Product
+@PutMapping("/users/productList/updateProduct")
+Signature => public Product updateProduct(@RequestBody Product product) {}
 
-@GetMapping("/users/{userType}/productList/fetch")
+9. Deleting a Product
+@DeleteMapping("/users/productList/deleteProduct/{productId}")
+Signature => public void deleteProduct(@PathVariable String productId) {}
 
-Signature : public List<Product> getAllProducts(@PathVariable String userType) {}
-
-3. List of costly products
-
-@GetMapping("/users/{userType}/productList/costlyProducts/{price}")
-
-Signature : public List<Product> getAllProductsBasedOnPrice(@PathVariable String userType, @PathVariable double price) {}
-
-4. List of products not available
-
-@GetMapping("/users/{userType}/productList/notAvailable")
-
-Signature : public List<Product> getAllProductsNotAvailabile(@PathVariable String userType) {}
-
-5. Filtered product list based on category
-
-@GetMapping("/users/{userType}/productList/searchByCategory/{listOfCategory}")
-
-Signature : public List<Product> getAllProductsBasedOnCategory(@PathVariable String userType,	@PathVariable String listOfCategory) {}
-
-6. Updating a product
-
-@PutMapping("/users/{userType}/productList/updateProduct/{productId}")
-
-Signature : public ResponseEntity<Product> updateProduct(@PathVariable String userType, @PathVariable long productId,	@RequestBody Product product) {}
-
-7. Deleting a product
-
-@DeleteMapping("/users/{userType}/productList/deleteProduct/{productId}")
-
-Signature : public ResponseEntity<Void> deleteProduct(@PathVariable String userType, @PathVariable long productId) {}
+10. Sort By Price
+@GetMapping("/users/productList/sortByPrice")
+Signature => public List<Product> getAllProductsSorted() {}
 
 
 
